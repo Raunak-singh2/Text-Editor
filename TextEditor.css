@@ -1,0 +1,97 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: #c4dbd6;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.container {
+ max-width: 991px;
+ width: 100%;
+ height: 50vh;
+ background: #fff;
+ border-radius: 8px;
+ overflow: hidden;
+ margin: 10px;
+
+}
+.toolbar{
+  padding: 8x;
+  background: #eee;
+  flex-wrap: wrap;
+}
+.toolbar .head{
+ display: flex;
+ grid-gap: 10px;
+ flex-wrap: wrap;
+}
+.toolbar .head >input{
+  max-width:400px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  border: 5px solid #ddd;
+  cursor: pointer;
+}
+.toolbar .head select{
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  border: 5px solid #eee;
+  cursor: pointer;
+}
+.toolbar .head .color{
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  border: 5px solid #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.toolbar .head input{
+  outline: none;
+  border: none;
+}
+.toolbar .head .color input::-moz-color-swatch{
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+}
+.toolbar.items-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.items-container{
+  margin-top:10px;
+  margin-bottom: 5px;
+}
+ .btn{
+background: #fff;
+border: 2px solid #ddd;
+border-radius: 6px;
+width: 30px;
+height: 30px;
+cursor: pointer;
+align-items:center;
+}
+.btn:hover{
+  background: #f3f3f3;
+}
+.typingItems{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}

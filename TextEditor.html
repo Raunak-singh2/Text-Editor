@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="TextEditor.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="TextEditor.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <div class="head">
+          <input type="text" placeholder="Filename" value="untitled" />
+          <select>
+            <option value="" selected="" disabled="">File</option>
+            <option value="New">New File</option>
+            <option value="Save">Save as text</option>
+            <option value="pdf">Save as pdf</option>
+          </select>
+          <select>
+            <option value="" selected="" disabled="">Formate</option>
+            <option value="New">Heading 1</option>
+            <option value="Save">Heading 2</option>
+            <option value="pdf">Heading 3</option>
+            <option value="New">Heading 4</option>
+            <option value="Save">Heading 5</option>
+            <option value="pdf">Heading 6</option>
+            <option value="p">Paragraph</option>
+          </select>
+          <select>
+            <option value="" selected="" disabled="">FontSize</option>
+            <option value="1">Extra Small</option>
+            <option value="2">Small</option>
+            <option value="3">Regular</option>
+            <option value="4">Medium</option>
+            <option value="5">Large</option>
+            <option value="6">Extra</option>
+            <option value="7">Big</option>
+          </select>
+          <div class="color">
+            <span>Color</span>
+            <input type="color" />
+          </div>
+          <div class="color">
+            <span>Background</span>
+            <input type="color" />
+          </div>
+        </div>
+        <div class="items-container">
+          <button class="btn" id="btn" title="Rfresh" onclick="formatDoc('undo')">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <button class="btn" id="btn" title="Back" onclick="formatDoc('redo')">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <button class="btn" id="btn" title="bold text" onclick="formatDoc('bold')">
+            <i class="fa-solid fas fa-bold"></i>
+          </button>
+          <button class="btn" id="btn" onclick="formatDoc('underline')">
+            <i class="fa-solid fa-underline"></i>
+          </button>
+          <button class="btn" id="btn" title="Italic text" onclick="formatDoc('italic')">
+            <i class="fa-solid fa-italic"></i>
+          </button>
+          <button class="btn" id="btn"  onclick="formatDoc('strikeThrough')">
+            <i class="fa-solid fa-strikethrough"></i>
+          </button>
+          <button class="btn" id="btn" title="Text left" onclick="formatDoc('justifyLeft')">
+            <i class="fa-solid fa-align-left"></i>
+          </button>
+          <button class="btn" id="btn" title="Text right" onclick="formatDoc('justifyRight')">
+            <i class="fa-solid fa-align-right"></i>
+          </button>
+          <button class="btn" id="btn" title="Text center" onclick="formatDoc('justifyCenter')">
+            <i class="fa-solid fa-align-center"></i>
+          </button>
+          <button class="btn" id="btn" onclick="formatDoc('insertUnorderedList')">
+            <i class="fa-solid fas fa-list-ul"></i>
+          </button>
+          <button class="btn" id="btn" onclick="formatDoc('insertOrderedList')">
+            <i class="fa-solid fa-list-ol"></i>
+          </button>
+          <button class="btn" id="btn" title="Link" onclick="rrrkk('createLink')">
+            <i class="fa-solid fa-link"></i>
+          </button>
+          <button class="btn" id="btn" title="Unlink" onclick="rrrkk('unlink')">
+            <i class="fa-solid fa-link-slash"></i>
+          </button>
+          <button class="btn" id="btn" title="code" onclick="formatDoc('insertHTML')">
+            <i class="fa-solid fa-code"></i>
+        </div>
+      </div>
+      <div class="typingItems" spellcheck="false" contenteditable="true">
+        <p>lorem ipsu</p>
+       </div>
+    </div>
+  </body>
+</html>
